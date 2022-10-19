@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-int main(int argc, char **argv)
+int main(int argc, char **argv)//teste
 {
     char linha [1000], linha1 [1000], *matriz_linha1 [3];
     char  *Host, *Cookie, *location, *contention, *Cache, *Server,
