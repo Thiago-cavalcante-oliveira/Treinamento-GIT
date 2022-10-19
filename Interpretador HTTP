@@ -1,0 +1,127 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main(int argc, char **argv)
+{
+    char linha [1000], linha1 [1000], *matriz_linha1 [3];
+    char  *Host, *Cookie, *location, *contention, *Cache, *Server,
+    *protetection, *frame, *date, *content, *metodo, *versao;
+    int i=0;
+    FILE *p_file;
+
+    p_file = fopen(argv[1], "r");
+
+    fgets(linha1, 1000, p_file);
+
+    matriz_linha1[0]=strtok(linha1," ");
+    metodo=matriz_linha1[0];
+
+
+   while (matriz_linha1[i] != NULL){
+        i++;
+    matriz_linha1[i]=strtok(NULL," ");
+
+    }
+    if(strcmp(metodo, "GET")==0)
+    {
+        printf("metodo: %s\n", metodo);
+
+        versao=matriz_linha1[2];
+        printf("versao: %s\n", versao);
+
+    }else{
+            versao=matriz_linha1[0];
+        printf("versao: %s\n", versao);
+
+    }
+
+
+    if(matriz_linha1[0][0]>='0' && matriz_linha1[0][0]<='9'){
+
+        printf("Resposta: %s %s\n:", matriz_linha1[0], matriz_linha1[1]);
+
+    }else if(matriz_linha1[1][0]>='0' && matriz_linha1[1][0]<='9'){
+
+        printf("Resposta: %s %s\n:", matriz_linha1[1], matriz_linha1[2]);
+
+    }
+
+   //printf("Versao: %s\n", matriz_linha1[3]);
+
+
+
+
+while (fgets(linha, 1000, p_file))
+       {
+        matriz_linha1[0]=strtok(linha,":");
+       // printf(" linha 2%s\n", matriz_linha1[0]);
+        matriz_linha1[1]=strtok(NULL,":");
+
+       // printf("linha 3 %s\n", matriz_linha1[1]);
+
+        if(strcmp(matriz_linha1[0], "Host")==0)
+        {
+            Host=matriz_linha1[1];
+            printf("Host: %s\n", Host);
+        }else if( strcmp(matriz_linha1[0], "Get")==0)
+        {
+            metodo=matriz_linha1[1];
+            printf("Metodo: %s\n", metodo);
+
+
+        }else if( strcmp(matriz_linha1[0], "Cookie")==0)
+        {
+            Cookie=matriz_linha1[1];
+            printf("Cookie: %s\n", Cookie);
+
+            }else if( strcmp(matriz_linha1[0], "Location")==0)
+        {
+            location=matriz_linha1[1];
+            printf("Location: %s\n",location);
+
+       }else if( strcmp(matriz_linha1[0], "Content-Type")==0)
+        {
+            contention=matriz_linha1[1];
+            printf("Content-Type: %s\n",contention);
+
+       }else if( strcmp(matriz_linha1[0], "Cache-Control")==0)
+        {
+            Cache=matriz_linha1[1];
+            printf("Cache-Control: %s\n",Cache);
+
+       }else if( strcmp(matriz_linha1[0], "Server")==0)
+        {
+            Server=matriz_linha1[1];
+            printf("Server: %s\n",Server);
+
+       }else if( strcmp(matriz_linha1[0], "X-XSS-Protection")==0)
+        {
+            protetection=matriz_linha1[1];
+            printf("X-XSS-Protection: %s\n",protetection);
+
+       }else if( strcmp(matriz_linha1[0], "X-Frame-Options")==0)
+        {
+            frame=matriz_linha1[1];
+            printf("X-Frame-Options: %s\n",frame);
+
+       }else if( strcmp(matriz_linha1[0], "Date")==0)
+        {
+            date=matriz_linha1[1];
+            printf("Date: %s\n",date);
+
+       }else if( strcmp(matriz_linha1[0], "Content-Length")==0)
+        {
+            content=matriz_linha1[1];
+            printf("Content-Length: %s\n",content);
+       }
+
+       }
+
+
+
+   fclose(p_file);
+
+
+    return 0;
+}
