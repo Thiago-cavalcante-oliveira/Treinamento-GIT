@@ -5,7 +5,7 @@
 #define FALSE 0
 
 
-typedef struct Letra{
+typedef struct Letra{ //teste
     char caracter;
     struct Letra *proximo;
 }Letra;
