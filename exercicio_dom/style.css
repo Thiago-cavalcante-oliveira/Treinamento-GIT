@@ -1,0 +1,51 @@
+body{
+    font-family: Calibri, Arial, sans-serif;
+    text-align: center;
+    font-size: 1.7vw;
+}
+
+#sessao-venda{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+.titulo{
+    font-size: 1.7vw;
+}
+
+.preco{
+    font-size: 2vw;
+    font-weight: 600;
+}
+
+.img_loja{
+    width: 70%;
+    padding: 10px;
+}
+
+#itens_section{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.publica{
+    border: 2px solid blue;
+    border-radius: 10px;
+    flex-wrap: wrap;
+   margin: 15px;
+    width: 25%;
+}
+.descricao{
+    font-size: 1.5vw;
+    text-align: justify;
+    padding: 15px;
+}
+input{
+    border: none;
+    color: white;
+    background-color: green;
+    font-size: 1.5vw;
+    border-radius: 20px;
+    padding: 40px;
+    margin: 20px;
+}
