@@ -5,6 +5,23 @@
     <title>Title</title>
 </head>
 <body>
+<form id="formulario">
+    <fieldset>
+        <legend>Bem vindo ao Banco dos Pobres</legend>
+        <label for="id_conta">Digite o nº da conta:</label>
+        <input type="number" name="id_conta" id="id_conta"><br><br>
 
+        <label for="saldo_value">Informe o saldo da sua Conta:</label>
+        <input type="number" name="saldo_value" id="saldo_value"><br><br>
+
+        <label for="debito_value">Informe o valor a ser debitado:</label>
+        <input type="number" name="debito_value" id="debito_value"><br><br>
+
+        <label for="credito_value">Informe o valor a ser creditado</label>
+        <input type="number" name="credito_valor" id="credito_value">
+    </fieldset>
+    <input type="button" id="button_confirm" value="Clique aqui para calcular">
+</form>
+<script language="JavaScript" src="index.js"></script>
 </body>
 </html>

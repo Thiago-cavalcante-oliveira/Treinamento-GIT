@@ -1,27 +1,22 @@
 const totalhoras = document.getElementById("total_horas");
 const valorhora = document.getElementById("valor_hora");
-let horaextra=0;
-let valorhoraextra=0;
-let gerou;
 
 
 
 function calcula(){
+    let valorhoraextra=valorhora.value+(valorhora.value/2);
+    let horaextra=0;
 
-    if (totalhoras.value >160){
-        horaextra.value = (((valorhora/100)*50)*(totalhoras-160));
-
-        let gerou = 'Gerou hora extra';
-    }else{
-        let gerou = 'não gerou hora extra';
+    if (totalhoras.value>160) {
+        horaextra = (totalhoras.value - 160) * valorhoraextra;
+        console.log(horaextra);
     }
-
     const formulario = document.getElementById("formulario");
     let resposta = document.createElement("article");
-    let salario = (valorhora.value*totalhoras.value)+ horaextra.value;
+    let salario = (valorhora.value*totalhoras.value)+ horaextra;
 
     resposta.innerHTML=`
-    <p> ${gerou}</p><br>
+   
     <p>Valor total salário: R$ ${salario}</p><br>
         `
     formulario.appendChild(resposta);
