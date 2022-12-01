@@ -1,0 +1,17 @@
+th{
+    border: 1px solid black;
+    width: 200px;
+    padding: 10px;
+}
+.cabecalho_tabela{
+    background-color: aquamarine;
+}
+.input_dados{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 30px;
+
+}
+#button_confirm{
+    width: 100px;
+}

@@ -2,6 +2,7 @@ const valido = document.getElementById("valido");
 const brancos = document.getElementById("voto_branco");
 const nulos = document.getElementById("nulo_voto");
 const total = document.getElementById("total_votos");
+const botao = document.getElementById("button_confirm")
 /*function imprime(){
      let total = parseInt(valido.value) +parseInt(brancos.value) +parseInt(nulos.value);
      console.log(total);
@@ -27,3 +28,4 @@ const total = document.getElementById("total_votos");
      pai.appendChild(resposta)
 
  }
+     botao.addEventListener("click", imprime_resultado)
