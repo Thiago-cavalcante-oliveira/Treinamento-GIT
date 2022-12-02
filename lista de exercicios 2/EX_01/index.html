@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="teste.html" method="post" id="formulario">
+    <fieldset>
+        <legend>Contabilidade de Votos</legend>
+        <label for="total_votos">Informe o total de votos:</label>
+        <input  type="number" name="total_votos" id="total_votos"><br>
+        <label for="valido">Informe o total de eleitores:</label>
+        <input type="number" name="valido_voto" id="valido" ><br>
+        <label for="voto_branco">Informe o total de votos em branco:</label>
+        <input type="number" name="branco_voto" id="voto_branco"><br>
+        <p id="branco_porcentagem"></p>
+        <label for="nulo_voto">Informe o total de votos nulos</label>
+        <input type="number" name="nulo_voto" id="nulo_voto" >
+    </fieldset>
+    <input type="button" id="button_confirm" value="Clique aqui para calcular">
+
+</form>
+
+<script language="JavaScript" src="index.js"></script>
+</body>
+</html>

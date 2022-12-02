@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="index.css" rel="stylesheet">
+
+</head>
+
+<header>
+    <h1>Pesquisa entre habitantes</h1>
+</header>
+<body>
+<section>
+<form class="input_dados" method="post">
+    <fieldset >
+        <label for="nome_cidadao"></label>
+        <input type="text" placeholder="Nome do cidadão"    name="nome_produto" id="nome_cidadao" autocomplete="off">
+        <label for="total_filhos"></label>
+        <input type="number" placeholder="Num. de filhos" name="total_filhos" id="total_filhos">
+        <label for="salario"></label>
+        <input type="number" placeholder="Salário (R$)" name="salario" id="salario">
+    </fieldset>
+    <input type="reset" id="button_confirm" value="Adicionar">
+</form>
+</section>
+<section>
+    <table id="tabela" class="tabela">
+        <tr class="cabecalho_tabela">
+            <th>Nome</th>
+            <th>Número de filhos</th>
+            <th>Salário</th>
+        </tr>
+    </table>
+</section>
+<section>
+    <h2>Informações Gerais</h2>
+    <article>
+        <p>Média de salário da população: R$ <a id="media_salario">0</a></p>
+        <p>Média de número de filhos: <a id="media_filhos">0</a></p>
+        <p>Maior Salário dos habitantes: R$<a id="maior_salario">0</a></p>
+        <p>Percentual de pessoas com salário menor que R$ 1.500,00:<a id="salario_menor">0</a></p>
+
+    </article>
+</section>
+
+<script language="JavaScript" src="index.js"></script>
+</body>
+</html>
